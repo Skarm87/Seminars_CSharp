@@ -12,4 +12,4 @@ int lastDigit = num % 10; // 456 % 10=450+6
 
 int result = firstDigit + lastDigit;
 
-Console.WriteLine("Сумма первой и последней цифры: " + result);
+Console.WriteLine($"Сумма первой и последней цифры: {result}");
