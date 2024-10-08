@@ -6,20 +6,26 @@
 // 617 => 1
 
 
-
 Console.WriteLine("Введите трёхначное целое число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-int secondDigit = num / 10 % 10;
-int lastDigit = num % 10;
-
-int result = secondDigit;
-int count = 1;
-
-while (count < lastDigit)
+if (num >= 100 && num <= 999)
 {
-    result = result * secondDigit; // result *= secondDigit
-    count++;
-}
+    int secondDigit = num / 10 % 10;
+    int lastDigit = num % 10;
 
-Console.WriteLine(result);
+    int result = secondDigit;
+    int count = 1;
+
+    while (count < lastDigit)
+    {
+        result = result * secondDigit; // result *= secondDigit
+        count++;
+    }
+
+    Console.WriteLine(result);
+}
+else
+{
+    Console.WriteLine("Ошибка ввода");
+}
